@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Memory Card Game</title>
+
+        <!--css stylesheet-->
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+        <!--google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet">
+
+        <!--font-awesome-->
+        <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1>Memory Card Game</h1>
+           </header>
+
+           <!--Score-board contains score(stars), moves, timer and reset-button-->
+           <section class="score-board">
+               <ul class="stars">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+               </ul>
+
+               <span class="moves">0</span> Move(s)
+
+               <div class="timer"></div>
+
+               <div class="reset" onclick=startGame()>
+                   <i class="fa fa-repeat"></i>
+               </div>
+           </section><!--end of score-board-->
+
+
+           <!--Game-board conatins 16 images in 4 rows-->
+
+           <ul class="game-board" id="board">
+                <li class="card" type="diamond">
+                    <i class="fa fa-diamond"></i>
+                </li>
+                <li class="card" type="plane">
+                    <i class="fa fa-paper-plane-o"></i>
+                </li>
+                <li class="card match" type="anchor">
+                    <i class="fa fa-anchor"></i>
+                </li>
+                <li class="card" type="bolt" >
+                    <i class="fa fa-bolt"></i>
+                </li>
+                <li class="card" type="cube">
+                    <i class="fa fa-cube"></i>
+                </li>
+                <li class="card match" type="anchor">
+                    <i class="fa fa-anchor"></i>
+                </li>
+                <li class="card" type="leaf">
+                    <i class="fa fa-leaf"></i>
+                </li>
+                <li class="card" type="bicycle">
+                    <i class="fa fa-bicycle"></i>
+                </li>
+                <li class="card" type="diamond">
+                    <i class="fa fa-diamond"></i>
+                </li>
+                <li class="card" type="bomb">
+                    <i class="fa fa-bomb"></i>
+                </li>
+                <li class="card" type="leaf">
+                    <i class="fa fa-leaf"></i>
+                </li>
+                <li class="card" type="bomb">
+                    <i class="fa fa-bomb"></i>
+                </li>
+                <li class="card open show" type="bolt">
+                    <i class="fa fa-bolt"></i>
+                </li>
+                <li class="card" type="bicycle">
+                    <i class="fa fa-bicycle"></i>
+                </li>
+                <li class="card" type="plane">
+                    <i class="fa fa-paper-plane-o"></i>
+                </li>
+                <li class="card" type="cube">
+                    <i class="fa fa-cube"></i>
+                </li>
+           </ul><!--end of game-board-->
+
+            <!--Popup contains feedback message and no-of moves, totalTime and starRating-->
+           <div id="popup" class="overlay">
+                <div class="message">
+                    <h2>Congratulations!!!</h2>
+                    <a href="#" class="close">X</a>
+                    <div class="feedback">
+                        <p>Number of Moves: <span id="finalMove"></span></p>
+                        <p>Total Time Taken: <span id="totalTime"></span></p>  
+                        <p>Rating:  <span id=starRating></span></p>    
+                    </div>
+                    <button id="playAgain"onclick="playAgain()">Play again 😄</button> 
+                 </div><!--end of message-->
+            </div><!--end of popup-->
+        </div><!--end of container-->
+
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
